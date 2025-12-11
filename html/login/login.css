@@ -1,27 +1,35 @@
-/* Gradiente decorativo superior colorido */
+/* ================================
+   Gradiente decorativo superior
+================================ */
 .colorgraph {
     height: 5px;
     border: none;
     border-radius: 5px;
     background: linear-gradient(to right,
-        #c4e17f 0%, #c4e17f 12.5%,
+        #c4e17f 0%,   #c4e17f 12.5%,
         #f7fdca 12.5%, #f7fdca 25%,
-        #fecf71 25%, #fecf71 37.5%,
+        #fecf71 25%,  #fecf71 37.5%,
         #f0776c 37.5%, #f0776c 50%,
-        #db9dbe 50%, #db9dbe 62.5%,
+        #db9dbe 50%,   #db9dbe 62.5%,
         #c49cde 62.5%, #c49cde 75%,
-        #669ae1 75%, #669ae1 87.5%,
+        #669ae1 75%,   #669ae1 87.5%,
         #62c2e4 87.5%, #62c2e4 100%
     );
 }
 
-body, html {
+/* ================================
+   Fundo da página
+================================ */
+html, body {
     height: 100%;
     margin: 0;
     background: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
     background-repeat: no-repeat;
 }
 
+/* ================================
+   Card do formulário
+================================ */
 .card-container.card {
     max-width: 450px;
     padding: 40px;
@@ -35,6 +43,9 @@ body, html {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* ================================
+   Inputs e Botões
+================================ */
 .form-signin input[type="email"],
 .form-signin input[type="password"],
 .form-signin button {
@@ -58,6 +69,9 @@ body, html {
     cursor: pointer;
 }
 
+/* ================================
+   Link "Esqueceu a senha?"
+================================ */
 .forgot-password {
     color: rgb(104, 145, 162);
 }
@@ -68,7 +82,9 @@ body, html {
     text-decoration: underline;
 }
 
-/* Mensagem de erro visível e acessível */
+/* ================================
+   Mensagens de erro
+================================ */
 .error {
     background-color: red;
     color: white;
@@ -78,7 +94,10 @@ body, html {
     margin-bottom: 10px;
 }
 
-/* Classe para esconder visualmente mas manter acessibilidade */
+/* ================================
+   Classe para esconder visualmente
+   mas manter acessível
+================================ */
 .visually-hidden {
     position: absolute !important;
     height: 1px;
@@ -86,4 +105,5 @@ body, html {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
+    border: 0;
 }

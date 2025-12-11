@@ -1,67 +1,77 @@
+/* ======================================================
+   GRADIENTE SUPERIOR COLORIDO
+====================================================== */
 .colorgraph {
     height: 5px;
-    border-top: 0;
-    background: #c4e17f;
+    border: none;
     border-radius: 5px;
-    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background: linear-gradient(to right,
+        #c4e17f 0%,   #c4e17f 12.5%,
+        #f7fdca 12.5%, #f7fdca 25%,
+        #fecf71 25%,  #fecf71 37.5%,
+        #f0776c 37.5%, #f0776c 50%,
+        #db9dbe 50%,   #db9dbe 62.5%,
+        #c49cde 62.5%, #c49cde 75%,
+        #669ae1 75%,   #669ae1 87.5%,
+        #62c2e4 87.5%, #62c2e4 100%
+    );
 }
 
-body, html {
+/* ======================================================
+   FUNDO DA PÁGINA
+====================================================== */
+html, body {
     height: 100%;
+    margin: 0;
+    background: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
 }
 
+/* ======================================================
+   CARD PRINCIPAL
+====================================================== */
 .card-container.card {
     max-width: 500px;
-    height: 350%;
-    padding: 10px 10px;
+    padding: 10px;
 }
 
+/* Card visual */
+.card {
+    background-color: #F7F7F7;
+    padding: 20px 25px 30px;
+    margin: 50px auto 25px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Perfil */
+.card-perfil {
+    width: 20px;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+/* ======================================================
+   BOTÕES
+====================================================== */
 .btn {
     font-weight: 700;
     height: 36px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
     user-select: none;
-    cursor: default;
+    cursor: pointer; /* corrigido */
 }
 
-/*
- * Card component
- */
-.card {
-    background-color: #F7F7F7;
-    /* just in case there no content*/
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    margin-top: 50px;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
-.card-perfil {
-    width: 20px;
-    margin: 0 auto 0px;
-    padding: 2px 2px 2px;
-}
-
-.btn-menu button{
+.btn-menu button {
     width: 150px;
 }
-  
+
+/* ======================================================
+   OPÇÕES (QUIZ / LISTA INTERATIVA)
+====================================================== */
 .option {
     font-size: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +83,7 @@ body, html {
     border: 1px solid #b8daff;
 }
 
- .option.correct {
+.option.correct {
     color: #155724;
     background: #d4edda;
     border: 1px solid #c3e6cb;
@@ -84,10 +94,12 @@ body, html {
     background: #f8d7da;
     border: 1px solid #f5c6cb;
 }
+
 .option.disabled {
     pointer-events: none;
 }
 
+/* Ícones de feedback */
 .option .icon {
     height: 15px;
     width: 15px;
@@ -96,9 +108,10 @@ body, html {
     text-align: center;
     font-size: 10px;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
     line-height: 12px;
 }
+
 .icon.tick {
     color: #23903c;
     border-color: #23903c;
@@ -111,6 +124,9 @@ body, html {
     border-color: #a42834;
 }
 
+/* ======================================================
+   TEXTO DAS OPÇÕES
+====================================================== */
 .choice-prefix {
     padding: 1rem 2rem;
     background-color: #56a5eb;

@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html class="wallpaper" lang="pt-BR">
+<html lang="pt-BR" class="wallpaper">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projeto Login</title>
+
     <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/png">
+
     <!-- Estilos -->
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <!-- Firebase SDK -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Firebase SDK (carrega antes dos scripts que dependem dele) -->
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <!-- Inicialização + Proteção de Rotas -->
     <script src="../../firebase-init.js"></script>
     <script src="../../auth-guard.js"></script>
-    <script src="../../logout.js"></script>
 </head>
+
 <body>
     <h1>HOME</h1>
-    <!-- Scripts no final do body para otimização -->
+
+    <!-- Botão de saída (opcional) -->
+    <button class="btn btn-danger m-3" onclick="logout()">Sair</button>
+
+    <!-- Scripts finais (para performance) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../logout.js"></script>
     <script src="home.js"></script>
 </body>
 </html>
